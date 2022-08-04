@@ -95,7 +95,7 @@ for file_name in files:
                 task_estimated_running_times[job_id] = []
             task_estimated_running_times[job_id].append(est_time / count)
 
-            #We are ready to generate the file. Sort the start times. 
+#We are ready to generate the file. Sort the start times. 
 job_start_sorted = {k:v for k,v in sorted(job_start.items(), key=lambda item: item[1])}
 for job_id, est_array in task_estimated_running_times.items():
     num_tasks = len(est_array)
