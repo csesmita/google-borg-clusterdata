@@ -7,7 +7,7 @@ job_start={}
 job_finish={}
 job_task = {}
 workload_info={}
-with open('/local/scratch/google-workload/collection-event/jobs_submit.json', 'r') as f:
+with open('jobs_submit.json', 'r') as f:
     for row in f:
         data = json.loads(row)
         job_id = data['collection_id']
@@ -15,7 +15,7 @@ with open('/local/scratch/google-workload/collection-event/jobs_submit.json', 'r
         job_time = int(data['time'])
         job_start[job_id] = job_time / 1000000.0
         #output_file.write('%s  %s' % (job_name, job_time))
-with open('/local/scratch/google-workload/collection-event/jobs_finish.json', 'r') as f:
+with open('jobs_finish.json', 'r') as f:
     for row in f:
         data = json.loads(row)
         job_id = data['collection_id']
@@ -27,7 +27,7 @@ job_ids = set(set(job_start.keys())  & set(job_finish.keys()))
 EVENT_SCHEDULE = 3 
 EVENT_FINISH = 6 
 tasks_dict = {}
-files = [file_name for file_name in glob.glob('/local/scratch/google-workload/instance-event/tasks_*.json')]
+files = [file_name for file_name in glob.glob('tasks_*.json')]
 for file_name in files:
     print("Processing file", file_name)
     with open(file_name, 'r') as f:
