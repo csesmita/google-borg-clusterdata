@@ -42,4 +42,4 @@ The traces are derived from Borg Cluster Workload Traces 2019 (version 3). As me
 6. Compute task running time as the time between schedule and finish events of the task. (There can be multiple machines that have schedule and finish events for a task. We compute the running time as the average of running times on each of these machines.)
 7. Compute estimated task running time as the average of all tasks identified for this job.
 
-The attached script (jobs.py) is the actual implementation of the algorithm.
+The attached script (workload_generator.py) is the actual implementation of the algorithm.
