@@ -5,9 +5,6 @@ The following trace captures a set of jobs from the original workload for which 
 
 Note that this workload does not contain any usage information or resource requests.
 
-## Location of Traces
-TODO
-
 ## Format of Workload Traces
 The .txt file describes one job per line. Each job description consists of -
 1. Job Arrival Time in seconds from epoch.
